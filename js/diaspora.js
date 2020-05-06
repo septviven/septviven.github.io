@@ -100,7 +100,7 @@ var Diaspora = {
             setTimeout(function() {
                 Diaspora.player();
                 $('#top').show();
-                comment = $("#gitalk-container");
+                comment = $("#qqtxc");
                 if (comment.data('ae') == true){
                     comment.click();
                 }
@@ -601,24 +601,7 @@ $(function() {
                 break;
             // comment
             case - 1 != tag.indexOf("comment"): 
-				if($('#gitalk-container').data('enable') == true){
-					Diaspora.loading(),
-					comment = $('#gitalk-container');
-					gitalk = new Gitalk({
-					  clientID: comment.data('ci'),
-					  clientSecret: comment.data('cs'),
-					  repo: comment.data('r'),
-					  owner: comment.data('o'),
-					  admin: comment.data('a'),
-					  id: decodeURI(window.location.pathname),
-					  distractionFreeMode: comment.data('d')
-					})
-					$(".comment").removeClass("link")
-					gitalk.render('gitalk-container')
-					Diaspora.loaded();
-				}else{
-					$('#gitalk-container').html("评论已关闭");
-				}
+					window.open("https://support.qq.com/product/150714");
                 return false;
                 break;
             default:
@@ -626,12 +609,6 @@ $(function() {
                 break;
         }
     })
-    // 是否自动展开评论
-    comment = $("#gitalk-container");
-    if (comment.data('ae') == true){
-        comment.click();
-    }
-		
-    console.log("%c Github %c","background:#24272A; color:#ffffff","","https://github.com/Fechin/hexo-theme-diaspora")
+    console.log("%c Github %c","background:#24272A; color:#ffffff","","Welcome.")
 })
 
